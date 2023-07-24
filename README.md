@@ -38,12 +38,11 @@ The introduction of theatres and streaming video companies such as Netflix are p
 
 ### Visual 1
 Worldwide gross income has been increasing since 2015
-plt.savefig("./images/worldwidegross.png", dpi=300)
+<img src="./images/worldwidegross.png"/>
  
 ### Visual 2
 Top 10 most used studios in movie production
-plt.savefig("./images/top10studios.png", dpi=300)
- 
+<img src="./images/top10studios.png"/>
 
 
 ## Conclusions
@@ -62,15 +61,10 @@ For any additional questions, please contact **Sylvester Magunda at sylvestermag
 Describe the structure of your repository and its contents, for example:
 
 ```
-├── __init__.py                         <- .py file that signals to python these folders contain packages
-├── README.md                           <- The top-level README for reviewers of this project
-├── dsc-phase1-project-template.ipynb   <- Narrative documentation of analysis in Jupyter notebook
-├── DS_Project_Presentation.pdf         <- PDF version of project presentation
-├── code
-│   ├── __init__.py                     <- .py file that signals to python these folders contain packages
-│   ├── visualizations.py               <- .py script to create finalized versions of visuals for project
-│   ├── data_preparation.py             <- .py script used to pre-process and clean data
-│   └── eda_notebook.ipynb              <- Notebook containing data exploration
-├── data                                <- Both sourced externally and generated from code
-└── images                              <- Both sourced externally and generated from code
+├── images                             <- Both sourced externally and generated from code
+├── zippedData                         <- Both sourced externally and generated from code
+├── .gitignore                         <- Has some ignored files 
+├── MicrosoftMovieAnalysisPresentation  <- PDF version of project presentation
+├── README.md                           <-  The top-level README for reviewers of this project
+└──dsc-phase1-project-template.ipynb    <- Narrative documentation of analysis in Jupyter notebook
 ```
