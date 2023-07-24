@@ -35,16 +35,16 @@ From my model, the results are as follows:
 * Most movies are produced in the English language
 
 The introduction of theatres and streaming video companies such as Netflix are probably the reasons for the increase in worldwide gross income. Currently, producing a high-quality movie does not come cheap; even after its production, some good money must be spent on marketing and advertising. Therefore, movie producers should consider a reasonable production budget to maximize profits. The average vote is around 6.5, which shows how people appreciate movies of almost all genres and that every movie has its audience. I am confident with this model because it focuses on minor details like original language, which will help Microsoft decide on the language of their movies. However, language does not determine how movies are rated, probably because of captions and people watching movies with languages they understand.
-Visual 1
-Worldwide gross income has been increasing since 2015
- 
-Visual 2
-Top 10 most used studios in movie production
- 
-
 
 ### Visual 1
-![graph1](./images/viz1.png)
+Worldwide gross income has been increasing since 2015
+plt.savefig("./images/worldwidegross.png", dpi=300)
+ 
+### Visual 2
+Top 10 most used studios in movie production
+plt.savefig("./images/top10studios.png", dpi=300)
+ 
+
 
 ## Conclusions
 
@@ -53,9 +53,9 @@ One of the main limitations of my project is that my data missed the genre colum
 
 ## For More Information
 
-Please review our full analysis in [our Jupyter Notebook](./dsc-phase1-project-template.ipynb) or our [presentation](./DS_Project_Presentation.pdf).
+Please review our full analysis in [my Jupyter Notebook](./microsoft-movie-analysis.ipynb) or [my presentation](./Microsoft-Movie-Analysis-Presentation.pdf).
 
-For any additional questions, please contact **name & email, name & email**
+For any additional questions, please contact **Sylvester Magunda at sylvestermagunda@gmail.com**
 
 ## Repository Structure
 
