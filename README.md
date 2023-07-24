@@ -1,72 +1,76 @@
-# Phase 1 Project Template - Minimum Viable Product (MVP)
+# Microsoft Movie Analysis
 
-![blueprint](images/blueprint.png)
+**Author**: Sylvester Magunda
 
-This repository is like a blueprint, providing structure for your first End of Phase Project. We suggest you base your Phase 1 project off of this repository so you can focus less on formatting and organization, and more on the _analysis and communication skills_ that will support your progress through the course. This template is designed to make your project portfolio-ready in order to impress the future employers who will review it. 
+## Overview
 
-## Repository Contents
+This project uses EDA to generate insights for Microsoft, which wants to start a new movie studio. Based on Box Office Mojo and IMDB data, recommendations are made on what Microsoft should consider before creating the studio. This model uses metrics such as worldwide gross income over the years, number of movies in specific languages, genre_ids with most movies, and average vote to help Microsoft make informed decisions. Generally, the findings show that Microsoft should produce movies in English. Results also show that worldwide gross income has been increasing since 2015.
 
-Below is a list of the contents of this repository - instructions for using them are in the next section.
+## Business Problem
 
-- `README.md`: The README for this repo branch explaining it's contents - you're reading it now
-- `TEMPLATE_README.md`: An example of a project README that provides a brief overview of your whole project
-- `dsc-phase1-project-template.ipynb`: A starter Jupyter Notebook with headings, code examples and guiding questions
-- `DS_Project_Presentation_Template.pdf`: A starter slide deck presenting your project - here is an [editable version](https://docs.google.com/presentation/d/1PaiH1bleXnhiPjTPsAXQSiAK0nkaRlseQIr_Yb-0mz0/copy)
-- `zippedData` folder: A folder for the data you reference with your code
-- `images` folder: A folder for the images you reference in your files 
-- `.gitignore`: A hidden file that tells git to not track certain files and folders
+Microsoft, realizing the proliferation of original video content production among leading companies, has decided to start a movie studio. However, they hardly have any information about movie production. This project explores the data to identify significant details to help Microsoft make informed decisions while creating the new studio.
+This analysis responds to the following questions:
+* What is the number of movies per original language?
+* What is the relationship between production budget and profits?
+* What is the average rating per original language?
+* How has worldwide gross income been changing over the years?
+* What is the relationship between the original language and the vote average?
 
-## Instructions For Using This Repository
+## Data
 
-### Fork This Repository
+This project is based on Box Office Mojo and IMDB data to understand the best-performing movies. The data used represent information on different movies using columns such as original_language, title, genre_ids, wordwide_gross, vote_average, and production_budget, which are all important in making informed decisions on movie production.
 
-**For a group project**, have only one team member do these steps:
+## Methods
 
-1. Fork this repository to your personal account
-   - In GitHub, go to this repository and click the "Fork" button in the upper right
-   
-2. Change the name of your fork of this repo to a _descriptive_ name of your choosing
-   - In GitHub, go to your fork of this repo -> "Settings" -> "Options" -> "Repository Name" -> "Rename"
-   - Make the name descriptive, since potential employers will read it. Ex: "Microsoft-Movie-Analysis" is better than "Project-1"
+This project uses descriptive analysis, including a description of gross income over time. This offers a suitable overview of the growth of the movie production sector and possible ways for Mircosoft to fit in it. 
 
-3. Use `git clone` to clone your fork of this repo to your local computer
+## Results
 
-4. **For a group project**, add team members as collaborators to your fork of this repo
-   - In GitHub, go to your fork of this repo -> "Settings" -> "Manage Access" -> "Invite Teams or People"
-   - Add your project team members as collaborators & send them the repo GitHub URL
+From my model, the results are as follows:
+* Worldwide gross income has been increasing since 2015
+* There is a positive linear relationship between profits and the production budget
+* The "vote_count" column has some outliers
+* Most movies are averagely voted at around 6.5 
+* Most movies produced are for genre_id "[18]"
+* Most movies are produced in the English language
 
-### Work In Your Fork Of This Repository
+The introduction of theatres and streaming video companies such as Netflix are probably the reasons for the increase in worldwide gross income. Currently, producing a high-quality movie does not come cheap; even after its production, some good money must be spent on marketing and advertising. Therefore, movie producers should consider a reasonable production budget to maximize profits. The average vote is around 6.5, which shows how people appreciate movies of almost all genres and that every movie has its audience. I am confident with this model because it focuses on minor details like original language, which will help Microsoft decide on the language of their movies. However, language does not determine how movies are rated, probably because of captions and people watching movies with languages they understand.
+Visual 1
+Worldwide gross income has been increasing since 2015
+ 
+Visual 2
+Top 10 most used studios in movie production
+ 
 
-- Work in the repo clone that you created on your local machine
-- Start writing and coding in the Jupyter Notebook `dsc-phase1-project-template.ipynb`
-- Fill in the README template in `TEMPLATE_README.md`
-- Use `git add`, `git commit`, and `git push` often to update your repo in GitHub
-   - For a refresher on how to do this and why it's important, review Topic 2: Bash and Git
 
-### Use The Slide Template
+### Visual 1
+![graph1](./images/viz1.png)
 
-1. Go to [this link](https://docs.google.com/presentation/d/1PaiH1bleXnhiPjTPsAXQSiAK0nkaRlseQIr_Yb-0mz0/copy) to make an editable copy of the slide deck in your own Google Drive account
-2. Go to "Slide," select "Change Theme," and pick a theme you like so your presentation doesn't look like everyone else's
-3. **For a group project**, click the "Share" button and add your teammates as editors
+## Conclusions
 
-### Tidy Up Your Project
+In conclusion, this model presents a major opportunity for Microsoft to invest in the movie production business and tap into the growing demand for original video content leading to increased worldwide gross income since 2015. Microsoft can make informed decisions about the types of movies to produce, ensuring the success of their new movie studio. Since more than 90% of movies in my dataset are in English, Microsoft should focus on producing English movies. Microsoft should also invest heavily in production to realize good profits. Finally, there is a list of my project's top 10 movie production studios that Microsoft can consider collaborating with or benchmark from.
+One of the main limitations of my project is that my data missed the genre columns but instead had genre ids, so I did not focus much on the genre. However, from my shallow analysis of genre_ids, Microsoft should focus on producing movies of genre_id 18. The issue is that my data could not define the genre's name. Therefore, there's a need for genres in future work, and more research should be done on how those genres relate to their specific worldwide gross income. Apart from theatrical earnings, studios can earn revenue through streaming services, television rights, home entertainment sales and 
 
-- Change the file name of the Jupyter Notebook (`dsc-phase1-project-template.ipynb`) to something more descriptive
-- Save an appropriately-named PDF version of your slide deck to the repository
-- Rename the template readme you've been working in by running `git mv TEMPLATE_README.md README.md`
-- Delete unnecessary files from the repo using `git rm`
-   - The presentation PDF: `DS_Project_Presentation_Template.pdf`
-   - Any unused data files in the `zippedData` folder
-   - Any unused images in the `images` folder
-- Utilize the .gitignore file to ignore large unzipped data files in the `zippedData` folder
-   - Add `*.csv`,`*.tsv`, and `*.db` to the .gitignore file
+## For More Information
 
-### Submit Your Project
+Please review our full analysis in [our Jupyter Notebook](./dsc-phase1-project-template.ipynb) or our [presentation](./DS_Project_Presentation.pdf).
 
-To submit your project, please follow the instructions in the "Project Submission & Review" page in the Milestones course.
+For any additional questions, please contact **name & email, name & email**
 
-***
-### Notes
+## Repository Structure
 
-- The visualizations in the notebook use best practices for visualization that you should try to emulate. For example, they have clear axes, descriptive titles, and appropriate number formatting
-- The `dsc-phase1-project-template.ipynb` is intended to be the _final version_ of your project. The first notebook you create will not look like this. You are encouraged to start with a very disorderly notebook and clean it as you go
+Describe the structure of your repository and its contents, for example:
+
+```
+├── __init__.py                         <- .py file that signals to python these folders contain packages
+├── README.md                           <- The top-level README for reviewers of this project
+├── dsc-phase1-project-template.ipynb   <- Narrative documentation of analysis in Jupyter notebook
+├── DS_Project_Presentation.pdf         <- PDF version of project presentation
+├── code
+│   ├── __init__.py                     <- .py file that signals to python these folders contain packages
+│   ├── visualizations.py               <- .py script to create finalized versions of visuals for project
+│   ├── data_preparation.py             <- .py script used to pre-process and clean data
+│   └── eda_notebook.ipynb              <- Notebook containing data exploration
+├── data                                <- Both sourced externally and generated from code
+└── images                              <- Both sourced externally and generated from code
+```
